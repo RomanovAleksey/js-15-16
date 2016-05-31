@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Search</title>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/tpl.js"></script>
+	<script src="js/main.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	
+	<div class="wrapper">
+		
+		<div class="search_block">
+			<div>
+			<form action="" id="form">
+				<input name="search_form" class="search_form" type="text" value="">
+				<input name ="search" class="search" value="search" src="" type="button" action="submit">
+			</form>	
+			</div>
+		</div>
+
+	</div>
+
+
+<script type="text/html" class="search_result">
+<div class="img_block">
+	<% for( var i = 0; i < data.hits.length ; ++i) { %>
+	<div class="img">
+		<a href="<%= data.hits[i].pageURL %>">
+			<img src="<%= data.hits[i].previewURL %>" alt="">
+		</a>
+	</div>
+	<% } %>
+</div>
+</script>
+	
+
+</body>
+</html>
